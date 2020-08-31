@@ -4,17 +4,14 @@ FROM $BASE_CONTAINER
 LABEL maintainer="Werner Ventures <wernerdataventures@gmail.com>"
 
 #modin
-RUN pip install --quiet --no-cache-dir \
-    'modin[all]' && \
+RUN pip install modin[all] --quiet --no-cache-dir 
+    
     
 #hummingbird
-RUN pip install --quiet --no-cache-dir \
-    'hummingbird-ml' && \
+RUN pip install hummingbird-ml --quiet --no-cache-dir 
 
 #onnx runtime
-RUN pip install --quiet --no-cache-dir \
-    'onnxruntime-gpu' && \
+RUN pip install onnxruntime-gpu --quiet --no-cache-dir 
 
 #rapids
-RUN pip install --quiet --no-cache-dir \
-    'rapidsai' && \
+RUN pip install rapidsai --quiet --no-cache-dir
