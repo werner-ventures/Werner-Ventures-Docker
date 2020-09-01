@@ -14,4 +14,4 @@ RUN pip install hummingbird-ml --quiet --no-cache-dir
 RUN pip install onnxruntime-gpu --quiet --no-cache-dir 
 
 #rapids
-RUN conda install -c rapidsai -c nvidia -c conda-forge -c defaults cudf=0.14 python=3.7 cudatoolkit=10.0
+#RUN conda install -c rapidsai -c nvidia -c conda-forge -c defaults cudf=0.14 python=3.7 cudatoolkit=10.0
