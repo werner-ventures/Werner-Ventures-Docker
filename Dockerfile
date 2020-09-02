@@ -6,7 +6,7 @@ LABEL maintainer="Werner Ventures <wernerdataventures@gmail.com>"
 RUN conda install modin[all]
 
 #onnx runtime
-RUN conda install onnxruntime-gpu
+RUN pip install onnxruntime-gpu
 
 #hummingbird
-RUN conda install hummingbird-ml
+RUN pip install hummingbird-ml
