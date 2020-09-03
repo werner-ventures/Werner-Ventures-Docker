@@ -1,7 +1,10 @@
 FROM gcr.io/deeplearning-platform-release/base-cu101
 
 #ØMQ
-RUN conda install pip -c conda-forge zeromq\
+RUN conda install pip\
+    -c conda-forge\
+#ØMQ
+    zeromq\
 #modin
     -c modin[all]\
 #caffe
@@ -9,7 +12,7 @@ RUN conda install pip -c conda-forge zeromq\
 #theano
     -c conda-forge theano\
 #pycuda
-apt-get update && apt-get install -y\
+    pip install -y\
     pycuda\
 #onnx runtime
     onnxruntime-gpu\
