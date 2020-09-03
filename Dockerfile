@@ -1,32 +1,22 @@
 FROM gcr.io/deeplearning-platform-release/base-cu101
 
-#pycuda
-RUN pip install pycuda
-
-#onnx runtime
-RUN pip install onnxruntime-gpu
-
 #ØMQ
-RUN conda install -c conda-forge zeromq
-
-#hummingbird
-RUN pip install hummingbird-ml
-
-#tensorrt + horovod
-RUN pip install horovod
-RUN pip install nvidia-pyindex
-
+RUN conda install pip -c conda-forge zeromq\
 #modin
-RUN conda install -c modin[all]
-
-#H2O
-RUN pip install h2o h2o-py
-
-#ML.NET
-RUN pip install nimbusml
-
+    -c modin[all]\
 #caffe
-RUN conda install -c anaconda caffe-gpu
-
+    -c anaconda caffe-gpu\
 #theano
-RUN conda install -c conda-forge theano
+    -c conda-forge theano
+#pycuda
+apt-get update && apt-get install -y\
+    pycuda\
+#onnx runtime
+    onnxruntime-gpu\
+#tensorrt + horovod
+    horovod\
+    nvidia-pyindex\
+#hummingbird
+    hummingbird-ml\
+#H2O
+    h2o h2o-py\
