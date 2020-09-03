@@ -10,4 +10,4 @@ RUN pip install pycuda\
     horovod\
     nvidia-pyindex\
     hummingbird-ml\
-    h2o h2o-py\
+    h2o h2o-py
