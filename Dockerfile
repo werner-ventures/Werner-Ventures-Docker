@@ -1,10 +1,7 @@
 FROM gcr.io/deeplearning-platform-release/base-cu101
 
 #ØMQ
-RUN conda install pip\
-    -c conda-forge\
-#ØMQ
-    zeromq\
+RUN conda install -c conda-forge zeromq\
 #modin
     -c modin[all]\
 #caffe
