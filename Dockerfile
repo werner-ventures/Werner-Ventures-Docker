@@ -3,13 +3,13 @@ FROM gcr.io/deeplearning-platform-release/base-cu101
 #ØMQ
 RUN conda install -c conda-forge zeromq\
 #modin
-    -c modin[all]\
+    modin[all]\
 #caffe
-    -c anaconda caffe-gpu\
+    anaconda caffe-gpu\
 #theano
-    -c conda-forge theano\
+    conda-forge theano
 #pycuda
-    pip install pycuda\
+RUN pip install pycuda\
 #onnx runtime
     onnxruntime-gpu\
 #tensorrt + horovod
@@ -18,4 +18,4 @@ RUN conda install -c conda-forge zeromq\
 #hummingbird
     hummingbird-ml\
 #H2O
-    h2o h2o-py\
+    h2o h2o-py
