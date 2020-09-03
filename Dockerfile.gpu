@@ -24,3 +24,9 @@ RUN pip install h2o h2o-py
 
 #ML.NET
 RUN pip install nimbusml
+
+#caffe
+RUN conda install -c anaconda caffe-gpu
+
+#theano
+RUN conda install -c conda-forge theano
