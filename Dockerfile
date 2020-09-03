@@ -7,7 +7,7 @@ RUN conda install pip -c conda-forge zeromq\
 #caffe
     -c anaconda caffe-gpu\
 #theano
-    -c conda-forge theano
+    -c conda-forge theano\
 #pycuda
 apt-get update && apt-get install -y\
     pycuda\
