@@ -4,7 +4,6 @@ RUN conda install zeromq\
     modin[all]\
     caffe-gpu\
     theano\
-    spleeter
 RUN pip install pycuda\
     onnxruntime-gpu\
     horovod\
