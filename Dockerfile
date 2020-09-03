@@ -12,7 +12,7 @@ RUN conda install -c conda-forge zeromq
 #hummingbird
 RUN pip install hummingbird-ml
 
-#tensorrt + nvidia-tensorflow + horovod
+#tensorrt + horovod
 RUN pip install horovod
 RUN pip install nvidia-pyindex
 
