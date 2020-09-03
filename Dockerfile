@@ -3,7 +3,7 @@ FROM gcr.io/deeplearning-platform-release/base-cu101
 RUN conda install zeromq\
     modin[all]\
     caffe-gpu\
-    theano\
+    theano
 RUN pip install pycuda\
     onnxruntime-gpu\
     horovod\
