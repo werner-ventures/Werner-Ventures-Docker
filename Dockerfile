@@ -12,8 +12,7 @@ RUN conda install pip\
 #theano
     -c conda-forge theano\
 #pycuda
-    pip install -y\
-    pycuda\
+    pip install pycuda\
 #onnx runtime
     onnxruntime-gpu\
 #tensorrt + horovod
