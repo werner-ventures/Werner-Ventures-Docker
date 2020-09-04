@@ -5,7 +5,6 @@ RUN conda install --yes && \
     modin && \
     -c anaconda caffe-gpu && \
     theano && \
-    spleeter && \
     pip && \
     conda pip install --no-cache-dir && \
     pycuda && \
