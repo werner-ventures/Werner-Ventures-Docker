@@ -5,15 +5,12 @@ RUN conda install --yes && \
     modin && \
     -c anaconda caffe-gpu && \
     theano && \
-    pip && \
-    conda pip install --no-cache-dir && \
+    conda clean --all -f -y
+RUN pip install --no-cache-dir && \
     pycuda && \
     onnxruntime-gpu && \
     horovod && \
     nvidia-pyindex && \
     hummingbird-ml && \
     h2o && \
-    nimbusml && \
-    essentia-tensorflow && \
-    musicnn-keras && \
-    conda clean --all -f -y
+    nimbusml
