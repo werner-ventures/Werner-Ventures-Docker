@@ -4,6 +4,7 @@ RUN conda install --yes zeromq && \
     modin && \
     -c anaconda caffe-gpu && \
     theano && \
+    pip
 RUN conda pip install --no-cache-dir pycuda && \
     onnxruntime-gpu && \
     horovod && \
