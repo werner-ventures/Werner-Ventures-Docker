@@ -1,15 +1,15 @@
 FROM gcr.io/deeplearning-platform-release/base-cu101
 
-RUN conda install zeromq
-RUN conda install caffe
-RUN conda install theano
-RUN conda install pip
-RUN pip install --no-cache-dir modin[all]
-RUN pip install --no-cache-dir pycuda
-RUN pip install --no-cache-dir onnxruntime-gpu
-RUN pip install --no-cache-dir horovod
-RUN pip install --no-cache-dir nvidia-pyindex
-RUN pip install --no-cache-dir hummingbird-ml
-RUN pip install --no-cache-dir h2o
-RUN pip install --no-cache-dir nimbusml
-RUN conda clean --all -f -y
+RUN conda install zeromq && \
+    conda install caffe && \
+    conda install theano && \
+    conda install pip && \
+    pip install --no-cache-dir modin[all] && \
+    pip install --no-cache-dir pycuda && \
+    pip install --no-cache-dir onnxruntime-gpu && \
+    pip install --no-cache-dir horovod && \
+    pip install --no-cache-dir nvidia-pyindex && \
+    pip install --no-cache-dir hummingbird-ml && \
+    pip install --no-cache-dir h2o && \
+    pip install --no-cache-dir nimbusml && \
+    conda clean --all -f -y
